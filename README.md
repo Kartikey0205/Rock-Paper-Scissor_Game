@@ -21,4 +21,4 @@ In our program,
 
 * paper vs. rock -> paper wins
 
-                                                     BEST OF LUCK  
+                                              BEST OF LUCK  
