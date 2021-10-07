@@ -2,12 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-int randomnumber(int n)
-{
-    srand(time(NULL));
-    return rand() % n;
-}
-
 int winner(char p1, char p2)
 { // it returns the status of player 1
 
@@ -57,6 +51,7 @@ int main()
     int Player_score = 0, Computer_score = 0, temp;
     char player_char, comp_char;
     char dict[] = {'r', 'p', 's'};
+    srand(time(NULL));
     printf("Write your name please\n");
     scanf("%s", name);
 
@@ -74,8 +69,7 @@ int main()
         // for Computer
         printf("\nComputer's Turn !! \n");
         printf("Computer is choosing one of them :-\n 1 for Rock(r) \n 2 for Paper(p)\n 3 for Scissors(s) \n");
-        temp = randomnumber(3) + 1;
-        comp_char = dict[temp - 1];
+        comp_char = dict[rand() % 3];
         printf("\nComputer Choose : %c \n ", comp_char);
 
         // comparing Score
