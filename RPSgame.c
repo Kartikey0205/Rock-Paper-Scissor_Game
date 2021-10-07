@@ -4,7 +4,6 @@
 
 int randomnumber(int n)
 {
-    srand(time(NULL));
     return rand() % n;
 }
 
@@ -57,6 +56,7 @@ int main()
     int Player_score = 0, Computer_score = 0, temp;
     char player_char, comp_char;
     char dict[] = {'r', 'p', 's'};
+    srand(time(NULL));
     printf("Write your name please\n");
     scanf("%s", name);
 
